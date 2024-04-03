@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kanban projet</title>
+        <link rel="stylesheet" href="kanban.css">
+        
+    </head>
+    <body>
+        <h1>The messsage  of the day </h1>
+        <p id="message">print message hiere</p>
+        <script>
+            const dailyMessage = ['You were born to lead and are used to facing challenges', 'You are down to earth but you need to believe in something more',
+                     'Brightness flows within the depths of your psyche this morning', 'Today will be a good one to do the unexpected', 
+                     'Nurture yourself while embracing transformation', 'Trust in yourself and your abilities as the Capricorn moon blows',
+                     'You live to jump into the passenger seat','Cover all of the details before tackling tasks today']
+                     
+                     
+                     let randomMessage = "";
+                     
+                     function messageGen() {
+                         randomMessage = dailyMessage[Math.floor(Math.random()*dailyMessage.length)];
+                         return randomMessage;
+                     }
+                     messageGen()
+                     document.getElementById("message").innerHTML = messageGen();                 
+                     
+        </script>
+
+        
+    </body>
+</html>
